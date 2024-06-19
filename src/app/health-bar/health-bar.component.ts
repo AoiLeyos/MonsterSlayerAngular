@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MonsterHealthService } from '../services/monster-health.service';
 
 @Component({
   selector: 'app-health-bar',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './health-bar.component.css'
 })
 export class HealthBarComponent {
-
+  constructor(public monsterHealthService: MonsterHealthService) { }
+  @Input() value: number = 100
 }
