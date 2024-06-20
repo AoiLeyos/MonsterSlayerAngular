@@ -5,6 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class HeroHealthService {
   private _currentHealth: number = 100
+  private _maxHealth: number = 100
+
+  get maxHealth() {
+    return this._maxHealth;
+  }
 
   get currentHealth() {
     return this._currentHealth;
@@ -13,7 +18,10 @@ export class HeroHealthService {
   set currentHealth(newCurrentHealth: number) {
     if (newCurrentHealth < 0) {
       this._currentHealth = 0
-    } else {
+    } else if (newCurrentHealth > this.maxHealth) {
+      this._currentHealth = this.maxHealth
+    }
+    else {
       this._currentHealth = newCurrentHealth;
     }
 
