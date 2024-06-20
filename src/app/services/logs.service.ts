@@ -7,6 +7,10 @@ export class LogsService {
   logs: string[] = []
 
   log(message: string) {
-    this.logs.shift();
+
+    if (this.logs.length > 16) {
+      this.logs.pop();
+    }
+    this.logs.unshift(message);
   }
 }
