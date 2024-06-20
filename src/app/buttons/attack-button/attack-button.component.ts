@@ -15,7 +15,6 @@ export class AttackButtonComponent {
     public heroHealthService: HeroHealthService,
     public monsterHealthService: MonsterHealthService) { }
 
-  disabled: boolean = false;
 
   Attack() {
     this.attackService.Attack()
