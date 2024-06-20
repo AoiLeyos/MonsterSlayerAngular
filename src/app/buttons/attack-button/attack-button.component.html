@@ -1,1 +1,2 @@
-<button (click)="heroAttack()">Attack</button>
+<button (click)="Attack()"
+        [disabled]="heroHealthService.currentHealth === 0 || monsterHealthService.currentHealth === 0">Attack</button>

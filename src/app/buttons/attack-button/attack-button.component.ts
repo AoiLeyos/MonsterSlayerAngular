@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AttackService } from '../../services/attack.service';
+import { HeroHealthService } from '../../services/hero-health.service';
+import { MonsterHealthService } from '../../services/monster-health.service';
 
 @Component({
   selector: 'app-attack-button',
@@ -9,10 +11,14 @@ import { AttackService } from '../../services/attack.service';
   styleUrl: './attack-button.component.css'
 })
 export class AttackButtonComponent {
-  constructor(public attackService: AttackService) { }
+  constructor(public attackService: AttackService,
+    public heroHealthService: HeroHealthService,
+    public monsterHealthService: MonsterHealthService) { }
 
-  heroAttack() {
-    this.attackService.heroAttack()
-  }
+  disabled: boolean = false;
+
+  Attack() {
+    this.attackService.Attack()
+  };
 
 }
