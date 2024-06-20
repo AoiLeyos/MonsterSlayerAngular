@@ -1,1 +1,2 @@
-<button (click)="speAttack()">Spe.Attack</button>
+<button (click)="speAttack()"
+        [disabled]="heroHealthService.currentHealth === 0 || monsterHealthService.currentHealth === 0">Spe.Attack</button>
