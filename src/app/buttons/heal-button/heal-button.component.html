@@ -1,1 +1,2 @@
-<button>Heal</button>
+<button (click)="Heal()"
+        [disabled]="heroHealthService.currentHealth === 0">Heal</button>
