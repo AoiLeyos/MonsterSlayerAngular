@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { LogsService } from '../services/logs.service';
-import { FormsModule } from '@angular/forms';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-fight-logs',
   standalone: true,
-  imports: [FormsModule],
+  imports: [NgFor],
   templateUrl: './fight-logs.component.html',
   styleUrl: './fight-logs.component.css'
 })
 export class FightLogsComponent {
   constructor(public logsService: LogsService) { }
   showLogs() {
-    this.logsService.logs
+    return this.logsService.logs
   }
 }

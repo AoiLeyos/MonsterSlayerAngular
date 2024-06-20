@@ -1,4 +1,6 @@
 <div>
     <h3>Logs</h3>
-    <ul> @for (let log of logsService.logs) {<li> {{log}} </li>} </ul>
+    <ul>
+        <li *ngFor="let log of logsService.logs"> {{log}} </li>
+    </ul>
 </div>
