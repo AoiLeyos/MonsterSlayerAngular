@@ -5,6 +5,7 @@ import { HealthComponent } from './health/health.component';
 import { HeroHealthService } from './services/hero-health.service';
 import { MonsterHealthService } from './services/monster-health.service';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { FightLogsComponent } from './fight-logs/fight-logs.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
     HealthBarComponent,
     HealthComponent,
     ButtonsComponent,
+    FightLogsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
