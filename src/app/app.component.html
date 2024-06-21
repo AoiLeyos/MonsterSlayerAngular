@@ -1,10 +1,5 @@
-<app-health-bar [value]="heroHealthService.currentHealth">
-  <p>Player</p>
-</app-health-bar>
-<app-health> {{heroHealthService.currentHealth}} </app-health>
-<app-health-bar [value]="monsterHealthService.currentHealth">
-  <p>Monster</p>
-</app-health-bar>
-<app-health> {{monsterHealthService.currentHealth}} </app-health>
-<app-buttons></app-buttons>
-<app-fight-logs></app-fight-logs>
+<main>
+  <app-health-bar></app-health-bar>
+  <app-buttons></app-buttons>
+  <app-fight-logs></app-fight-logs>
+</main>
