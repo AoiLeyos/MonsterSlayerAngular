@@ -10,8 +10,6 @@ export class MonsterHealthService {
   private _currentHealth: number = 100
 
 
-
-
   get maxHealth() {
     return this._maxHealth;
   }
@@ -30,9 +28,4 @@ export class MonsterHealthService {
 
   }
 
-  isAlive(): boolean {
-    if (this._currentHealth > 0) {
-      return true
-    } else { return false }
-  }
 }
