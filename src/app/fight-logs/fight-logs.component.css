@@ -16,6 +16,7 @@ ul {
     justify-content: center;
     flex-direction: column;
     border-style: solid;
+    background-color: rgba(128, 128, 128, 0.596);
     width: 600px;
     border-radius: 10px;
     position: absolute;
