@@ -22,24 +22,21 @@ export class SpecialAttackService {
 
     this.monsterHealthService.currentHealth -= heroSpecialDamage
     this.logsService.log(`Player use a special attack on Monster and hit them for ${heroSpecialDamage} damage, Monster health : ${this.monsterHealthService.currentHealth} .`)
-    setTimeout(() => {
-      this.heroHealthService.currentHealth -= monsterDamage
-      this.logsService.log(`Monster hit Player for ${monsterDamage} damage, Player health : ${this.heroHealthService.currentHealth} .`)
 
-      if (this.heroHealthService.currentHealth === 0 && this.monsterHealthService.currentHealth === 0) {
-        alert("Equality");
-        this.resetGameService.resetGame()
-      } else if (this.heroHealthService.currentHealth === 0) {
-        alert("Monster win's");
-        this.resetGameService.resetGame();
-      }
-      else if (this.monsterHealthService.currentHealth === 0) {
-        alert("Player win");
-        this.resetGameService.resetGame()
-      }
-    }, 150);
+    this.heroHealthService.currentHealth -= monsterDamage
+    this.logsService.log(`Monster hit Player for ${monsterDamage} damage, Player health : ${this.heroHealthService.currentHealth} .`)
 
 
-
+    if (this.heroHealthService.currentHealth === 0 && this.monsterHealthService.currentHealth === 0) {
+      alert("Equality");
+      this.resetGameService.resetGame()
+    } else if (this.heroHealthService.currentHealth === 0) {
+      alert("Monster win's");
+      this.resetGameService.resetGame();
+    }
+    else if (this.monsterHealthService.currentHealth === 0) {
+      alert("Player win");
+      this.resetGameService.resetGame()
+    }
   }
 }
