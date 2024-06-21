@@ -5,11 +5,32 @@
 }
 
 main {
-    background-color: grey;
+    background-image: url(../../public/Background/Nature-1718971626807.png);
+    background-size: cover;
     margin: 40px 20px 0 20px;
     padding-bottom: 240px;
 }
 
 app-buttons {
     height: 100px;
+}
+
+.playerImg {
+    background-image: url(../../public/Img/hero.png);
+    background-size: cover;
+    position: relative;
+    top: -510px;
+    left: -17%;
+    width: 150px;
+    height: 150px;
+}
+
+.monsterImg {
+    background-image: url(../../public/Img/Monster.png);
+    background-size: cover;
+    position: relative;
+    top: -660px;
+    left: 94%;
+    width: 150px;
+    height: 150px;
 }
