@@ -2,4 +2,45 @@ progress {
     border-radius: 20px;
     height: 30px;
     width: 400px;
+    margin-top: 20px;
+    z-index: 1;
+
+}
+
+h2 {
+    position: relative;
+    left: 20px;
+    top: 40px;
+}
+
+.PlayerProgress::-moz-progress-bar {
+    background-color: green;
+}
+
+.MonsterProgress::-moz-progress-bar {
+    background-color: sienna;
+}
+
+
+
+.PlayerProgress::-webkit-progress-value {
+    background-color: green;
+}
+
+.MonsterProgress::-webkit-progress-value {
+    background-color: sienna;
+}
+
+.Player {
+    color: green;
+}
+
+.Monster {
+    color: red;
+}
+
+.healthBar {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
 }
