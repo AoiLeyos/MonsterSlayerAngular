@@ -1,0 +1,25 @@
+h3 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 300px;
+
+}
+
+li {
+    color: darkred;
+    list-style-type: circle;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-style: solid;
+    width: 600px;
+    border-radius: 10px;
+    position: absolute;
+    top: 350px;
+    left: 34%;
+    right: 34%;
+}
