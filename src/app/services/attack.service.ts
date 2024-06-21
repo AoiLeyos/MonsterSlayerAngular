@@ -20,21 +20,27 @@ export class AttackService {
 
     this.monsterHealthService.currentHealth -= heroDamage
     this.logsService.log(`Player hit Monster for ${heroDamage} damage, Monster health : ${this.monsterHealthService.currentHealth} .`)
-    this.heroHealthService.currentHealth -= monsterDamage
-    this.logsService.log(`Monster hit Player for ${monsterDamage} damage Player health : ${this.heroHealthService.currentHealth} .`)
+
+    setTimeout(() => {
+      this.heroHealthService.currentHealth -= monsterDamage
+      this.logsService.log(`Monster hit Player for ${monsterDamage} damage Player health : ${this.heroHealthService.currentHealth} .`)
 
 
-    if (this.heroHealthService.currentHealth === 0 && this.monsterHealthService.currentHealth === 0) {
-      alert("Equality");
-      this.resetGameService.resetGame()
-    } else if (this.heroHealthService.currentHealth === 0) {
-      alert("Monster win's");
-      this.resetGameService.resetGame();
-    }
-    else if (this.monsterHealthService.currentHealth === 0) {
-      alert("Player win");
-      this.resetGameService.resetGame()
-    }
+      if (this.heroHealthService.currentHealth === 0 && this.monsterHealthService.currentHealth === 0) {
+        alert("Equality");
+        this.resetGameService.resetGame()
+      } else if (this.heroHealthService.currentHealth === 0) {
+        alert("Monster win's");
+        this.resetGameService.resetGame();
+      }
+      else if (this.monsterHealthService.currentHealth === 0) {
+        alert("Player win");
+        this.resetGameService.resetGame()
+      }
+    }, 150);
+
+
+
   }
 
 
