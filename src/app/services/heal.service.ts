@@ -14,7 +14,7 @@ export class HealService {
   ) { }
 
   heal() {
-    let heroHeal = Math.floor(Math.random() * 16)
+    let heroHeal = Math.floor(Math.random() * 21)
     let monsterDamage = Math.floor(Math.random() * 21)
     this.heroHealthService.currentHealth += heroHeal
     this.logsService.log(`Player heal himself for ${heroHeal}, current Player health : ${this.heroHealthService.currentHealth} .`)
