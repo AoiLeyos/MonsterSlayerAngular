@@ -1,0 +1,20 @@
+<div class="healthBar">
+    <div>
+        <h2>
+            <p class="Player">Player :</p>
+        </h2>
+        <progress class="PlayerProgress"
+                  [value]="heroHealthService.currentHealth"
+                  max="100"></progress>
+        <app-health> {{heroHealthService.currentHealth}} </app-health>
+    </div>
+    <div>
+        <h2>
+            <p class="Monster">Monster :</p>
+        </h2>
+        <progress class="MonsterProgress"
+                  [value]="monsterHealthService.currentHealth"
+                  max="100"></progress>
+        <app-health> {{monsterHealthService.currentHealth}} </app-health>
+    </div>
+</div>
