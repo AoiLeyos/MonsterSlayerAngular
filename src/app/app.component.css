@@ -19,8 +19,8 @@ app-buttons {
     background-image: url(../../public/Img/hero.png);
     background-size: cover;
     position: relative;
-    top: -510px;
-    left: -17%;
+    top: -750px;
+    left: -22%;
     width: 150px;
     height: 150px;
 }
@@ -29,8 +29,8 @@ app-buttons {
     background-image: url(../../public/Img/Monster.png);
     background-size: cover;
     position: relative;
-    top: -660px;
-    left: 94%;
+    top: -900px;
+    left: 105%;
     width: 150px;
     height: 150px;
 }
