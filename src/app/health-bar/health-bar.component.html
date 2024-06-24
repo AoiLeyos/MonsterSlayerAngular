@@ -1,14 +1,14 @@
 <div class="healthBar">
-    <div>
+    <div class="health-container">
         <h2>
             <p class="Player">Player :</p>
         </h2>
         <progress class="PlayerProgress"
-                  [value]="heroHealthService.currentHealth"
-                  max="100"></progress>
+                  [value]="heroHealthService.currentHealth" max="100">
+            {{heroHealthService.currentHealth}} </progress>
         <app-health> {{heroHealthService.currentHealth}} </app-health>
     </div>
-    <div>
+    <div class="health-container">
         <h2>
             <p class="Monster">Monster :</p>
         </h2>
